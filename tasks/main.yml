@@ -1,0 +1,25 @@
+---
+- name: Ensure that the {{ protonvpn_pkg }} package is installed
+  tags: protonvpn
+  homebrew_cask:
+    name: "{{ protonvpn_pkg|lower }}"
+    state: present
+  register: protonvpn_homebrew_cask
+  when: protonvpn_pkg is defined
+
+- name: Applying {{ protonvpn_pkg }} configurations
+  tags: protonvpn
+  osx_defaults:
+    domain: "{{ protonvpn_domain }}"
+    key: "{{ item.key|regex_replace('_', ' ') }}"
+    state: "{{ item.value.state|default('present') }}"
+    type: "{{ item.value.type }}"
+    value: "{{ item.value.value }}"
+  with_dict: "{{ protonvpn_defaults }}"
+  when:
+    - protonvpn_domain is defined
+    - protonvpn_homebrew_cask|success
+    - item.key is defined
+    - item.value.type is defined
+    - item.value.value is defined
+...
