@@ -1,7 +1,7 @@
 # ansible-role-protonvpn
 
-[![Build Status](https://travis-ci.org/linuxhq/ansible-role-protonvpn.svg?branch=master)](https://travis-ci.org/linuxhq/ansible-role-protonvpn)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-protonvpn-blue.svg?style=flat)](https://galaxy.ansible.com/linuxhq/protonvpn)
+[![Build Status](https://travis-ci.org/tkimball83/ansible-role-protonvpn.svg?branch=master)](https://travis-ci.org/tkimball83/ansible-role-protonvpn)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-protonvpn-blue.svg?style=flat)](https://galaxy.ansible.com/tkimball83/protonvpn)
 [![License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](COPYING)
 
 macOS - Secure internet anywhere
