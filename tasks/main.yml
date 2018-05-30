@@ -18,7 +18,7 @@
   with_dict: "{{ protonvpn_defaults }}"
   when:
     - protonvpn_domain is defined
-    - protonvpn_homebrew_cask|success
+    - protonvpn_homebrew_cask is success
     - item.key is defined
     - item.value.type is defined
     - item.value.value is defined
