@@ -1,8 +1,8 @@
 ---
-- name: Ensure that the {{ protonvpn_pkg }} package is installed
+- name: Ensure that the {{ protonvpn_package }} package is installed
   tags: protonvpn
   homebrew_cask:
-    name: "{{ protonvpn_pkg|lower }}"
+    name: "{{ protonvpn_package|lower }}"
     state: present
   register: protonvpn_homebrew_cask
 
