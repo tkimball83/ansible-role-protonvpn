@@ -14,9 +14,9 @@ This role requires homebrew and homebrew cask to be installed
 
 Available variables are listed below, along with default values:
 
-    protonvpn_pkg: ProtonVPN
-    protonvpn_domain: "ch.{{ protonvpn_pkg|lower }}.mac"
     protonvpn_defaults: {}
+    protonvpn_domain: "ch.{{ protonvpn_package|lower }}.mac"
+    protonvpn_package: ProtonVPN
 
 ## Dependencies
 
