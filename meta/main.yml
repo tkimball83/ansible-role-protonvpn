@@ -1,6 +1,7 @@
 ---
 dependencies: []
 galaxy_info:
+  role_name: protonvpn
   author: tkimball83
   description: macOS - Secure internet anywhere
   license: GPLv3
