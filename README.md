@@ -14,7 +14,7 @@ This role requires homebrew and homebrew cask to be installed
 
 Available variables are listed below, along with default values:
 
-    protonvpn_defaults: {}
+    protonvpn_defaults: []
     protonvpn_domain: "ch.{{ protonvpn_package|lower }}.mac"
     protonvpn_package: ProtonVPN
 
@@ -29,28 +29,28 @@ None
       roles:
         - role: tkimball83.protonvpn
           protonvpn_defaults:
-            AutoConnect:
+            - name: AutoConnect
               type: bool
               value: true
-            ConnectOnDemand:
+            - name: ConnectOnDemand
               type: bool
               value: true
-            LaunchedBefore:
+            - name: LaunchedBefore
               type: bool
               value: true
-            NeagentAppeared:
+            - name: NeagentAppeared
               type: bool
               value: true
-            RememberLogin:
+            - name: RememberLogin
               type: bool
               value: true
-            StartMinimized:
+            - name: StartMinimized
               type: bool
               value: false
-            StartOnBoot:
+            - name: StartOnBoot
               type: bool
               value: true
-            SystemNotifications:
+            - name: SystemNotifications
               type: bool
               value: true
 
