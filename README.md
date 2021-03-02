@@ -8,7 +8,7 @@ macOS - Secure internet anywhere
 
 ## Requirements
 
-This role requires homebrew and homebrew cask to be installed
+This role requires homebrew to be installed
 
 ## Role Variables
 
@@ -41,6 +41,9 @@ None
             - name: NeagentAppeared
               type: bool
               value: true
+            - name: "{{ 'NetShield' + ansible_user_id }}"
+              type: int
+              value: 2
             - name: RememberLogin
               type: bool
               value: true
@@ -56,7 +59,7 @@ None
 
 ## License
 
-Copyright (C) 2018 Taylor Kimball <tkimball@linuxhq.org>
+Copyright (C) 2021 Taylor Kimball <tkimball@linuxhq.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
